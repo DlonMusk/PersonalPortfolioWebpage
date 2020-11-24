@@ -32,30 +32,31 @@ body{
 }
 
 
-#my-projects-section-video{
+#projects{
     position: absolute;
-    right: 0;
-    top: 100vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    object-fit: cover;
-    margin: 0;
-    z-index: -2;
-    justify-content: center;
+    top: 80vh;
+    z-index: 1;
 }
 
-#projects{
-    overflow: auto;
-    height: 100vh;
-    position: static;
+
+#section-header-wraper{
+    height: 30vh;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.603), rgb(0, 0, 0), black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     
 }
 
 .projects-section-header{
+    position: relative;
+    top: 4em;
     text-align: center;
-    text-shadow: 2px 2px rgb(129, 25, 25);
+    color: rgba(212, 212, 212, 0.774);
+    text-shadow: 0 0.4em 0.1em rgb(102, 242, 247);
+    
+    
     
 }
 
@@ -65,8 +66,8 @@ body{
     align-content: space-around;
     flex-wrap: wrap;
     height: 150vh;
-    
-    
+    padding-top: 10vh;
+    background-image: linear-gradient(black, white);
 
 }
 
@@ -74,17 +75,18 @@ body{
     text-align: center;
     background-color: rgba(184, 184, 184, 0.521);
     padding: 10px;
+    margin: 0 5vw;
     
     border-radius: 5%;
 }
 
 .project-title:hover{
-    transform: scale(1.4);
-    z-index: 2;
+    transform: scale(1.2);
+    z-index: -1;
 }
 
 .project-image{
-    width: 35vw;
+    width: 30vw;
     height: auto;
     object-fit: fill;
 
@@ -103,7 +105,62 @@ body{
 
 #navbar{
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     left: 0;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 7vh 0;
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.644), transparent);
 }
+
+.nav-list{
+    color: red;
+    padding: 0;
+}
+
+.nav-item{
+    display: inline-block;   
+    margin: 0 10vw; 
+
+}
+
+.nav-link{
+    text-decoration: none;
+    color: red;
+    text-align: center;
+}
+
+#contact{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-section-header{
+
+}
+
+.contact-links{
+
+    display: flex;
+}
+
+.contact-link{
+    margin: 0 8vw;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-link{
+    padding-right: 20px;
+}
+
+
