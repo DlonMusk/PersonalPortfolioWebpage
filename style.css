@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    scroll-behavior: none;
+}
+
+#my-welcome-section-video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    object-fit: cover;
+    margin: 0;
+    z-index: -1;
+    justify-content: center;
+}
+
+#welcome-section{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+#section-header{
+    color: rgba(212, 212, 212, 0.774);
+    text-shadow: 0 0.4em 0.1em rgb(247, 102, 102);
+}
+
+
+#my-projects-section-video{
+    position: absolute;
+    right: 0;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    object-fit: cover;
+    margin: 0;
+    z-index: -2;
+    justify-content: center;
+}
+
+#projects{
+    overflow: auto;
+    height: 100vh;
+    position: static;
+    
+}
+
+.projects-section-header{
+    text-align: center;
+    text-shadow: 2px 2px rgb(129, 25, 25);
+    
+}
+
+#projects-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 150vh;
+    
+    
+
+}
+
+.project-title{
+    text-align: center;
+    background-color: rgba(184, 184, 184, 0.521);
+    padding: 10px;
+    
+    border-radius: 5%;
+}
+
+.project-title:hover{
+    transform: scale(1.4);
+    z-index: 2;
+}
+
+.project-image{
+    width: 35vw;
+    height: auto;
+    object-fit: fill;
+
+}
+
+.project-card-title{
+    margin: 0;
+    height: 2em;
+}
+
+
+
+
+
+
+
+#navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
