@@ -1,6 +1,22 @@
+@font-face{
+    font-family: sega;
+    src: url("media/fonts/SEGA.TTF")
+}
+
+@font-face{
+    font-family: hirosh;
+    src: url("media/fonts/hirosh/HIROSHT.TTF")
+}
+
+@font-face{
+    font-family: rome;
+    src: url("media/fonts/rome/Buenard-Regular.ttf");
+}
+
 body{
     margin: 0;
     scroll-behavior: none;
+    
 }
 
 #my-welcome-section-video {
@@ -27,37 +43,45 @@ body{
 }
 
 #section-header{
-    color: rgba(212, 212, 212, 0.774);
+    font-family: sega;
+    letter-spacing: 0.5em;
+    line-height: 2.2em;
+    text-align: center;
+    color: rgb(212, 212, 212);
     text-shadow: 0 0.4em 0.1em rgb(247, 102, 102);
+
 }
 
 
 #projects{
     position: absolute;
     top: 80vh;
-    z-index: 1;
+
 }
 
 
 #section-header-wraper{
     height: 30vh;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.603), rgb(0, 0, 0), black);
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.678), rgb(0, 0, 0), black);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    z-index: 4;
     
 }
 
 .projects-section-header{
     position: relative;
-    top: 4em;
+    font-family: hirosh;
+    font-size: 4em;
+    background-color: black;
+    margin: 0;
+    padding: 50vh 0 0 0;
     text-align: center;
-    color: rgba(212, 212, 212, 0.774);
-    text-shadow: 0 0.4em 0.1em rgb(102, 242, 247);
-    
-    
-    
+    color: rgba(212, 212, 212, 0.911);
+    text-shadow: 0 0.2em 0.1em rgb(102, 242, 247);
+    z-index: 2;
 }
 
 #projects-container{
@@ -67,34 +91,38 @@ body{
     flex-wrap: wrap;
     height: 150vh;
     padding-top: 10vh;
-    background-image: linear-gradient(black, white);
+    background-image: linear-gradient(black, rgb(209, 209, 209));
+    border: 10px black;
 
 }
 
-.project-title{
+.project-tile{
     text-align: center;
-    background-color: rgba(184, 184, 184, 0.521);
-    padding: 10px;
+    background-image: linear-gradient(90deg, rgb(102, 242, 247), rgb(247, 102, 102),rgba(255, 255, 255, 0.795), rgb(247, 102, 102),rgb(102, 242, 247));
+    padding: 5px;
     margin: 0 5vw;
     
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 .project-title:hover{
     transform: scale(1.2);
-    z-index: -1;
+    
 }
 
 .project-image{
-    width: 30vw;
+    width: 35vw;
     height: auto;
     object-fit: fill;
 
 }
 
 .project-card-title{
-    margin: 0;
-    height: 2em;
+    margin: 0.5em;
+    height: 1.2em;
+    background-color: rgba(255, 255, 255, 0.568);
+    border: 2px solid white;
+    border-radius: 12px;
 }
 
 
@@ -105,14 +133,14 @@ body{
 
 #navbar{
     position: fixed;
-    z-index: 5;
+    z-index: 3;
     top: 0;
     left: 0;
     min-width: 100vw;
     display: flex;
     justify-content: center;
-    padding: 7vh 0;
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.644), transparent);
+    background-color: rgba(255, 255, 255, 0.932);
+    font-family: sega;
 }
 
 .nav-list{
@@ -128,24 +156,27 @@ body{
 
 .nav-link{
     text-decoration: none;
-    color: red;
+    color: rgb(247, 102, 102);
     text-align: center;
 }
 
 #contact{
-    height: 60vh;
+    font-family: rome;
+    height: 40vh;
+    padding: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    background-image: linear-gradient(rgb(209, 209, 209), white);
 }
 
 .contact-section-header{
-
+    text-align: center;
 }
 
 .contact-links{
-
+    margin-top: 10vh;
     display: flex;
 }
 
@@ -156,6 +187,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 
 }
 
@@ -164,3 +196,43 @@ body{
 }
 
 
+@media(max-width: 970px){
+    .contact-links{
+        flex-direction: column;
+        margin-bottom: 10vh;
+        margin-top: 0;
+    }
+    .contact-link{
+        margin: 5vw;
+    }
+
+    #projects{
+        height: 300vh;
+    }
+    #projects-container{
+        flex-direction: column;
+        width: 100vw; 
+
+    }
+    .projects-section-header{
+        padding-top: 20vh;
+    }
+    .project-image{
+        width: 40vw;
+    }
+
+
+    #contact{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-section-header{
+        margin-top: 20vh;
+    }
+
+    .project-tile{
+        margin: 0;
+        margin: 10vh 0;
+    }
+}
